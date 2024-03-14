@@ -1,0 +1,26 @@
+{
+  "stepDefinitions": [
+    "[filepath]/**/*.{js,ts}",
+    "[filepath].{js,ts}",
+    "cypress/e2e/steps/*.{js,ts}"
+  ],
+
+  "filterSpecs": true,
+  "omitFiltered": true,
+  "json": {
+    "enabled": true,
+    "output": "cypress/reports/cucumber-reports/cucumber-report.json",
+    "formatter": "cucumber-json-formatter",
+    "overwrite": true
+  },
+  "html": {
+    "enabled": true,
+    "output": "cypress/reports/cucumber-reports/cucumber-report.html",
+    "overwrite": false
+  },
+  "messages": {
+    "enabled": true,
+    "output": "cypress/reports/cucumber-reports/cucumber-messages.ndjson",
+    "overwrite": true
+  }
+}

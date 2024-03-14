@@ -1,0 +1,37 @@
+{
+  "name": "template-cypress-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run cypress:run",
+    "cypress": "cypress open",
+    "cypress:run": "cypress run --env tags=@test"
+  },
+  "keywords": [],
+  "author": "Alice Garcia dos Santos",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.13.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-on-fix": "^1.0.2",
+    "cypress-plugin-steps": "^1.1.1",
+    "cypress-xpath": "^2.0.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/webpack-preprocessor": "^6.0.0",
+    "cucumber-junit": "^1.5.0",
+    "moment": "^2.29.4",
+    "pdfmake": "^0.2.7",
+    "webpack": "^5.88.2",
+    "xml": "^1.0.1"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  }
+}
