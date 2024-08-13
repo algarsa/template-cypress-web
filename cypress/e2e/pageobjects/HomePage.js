@@ -9,38 +9,42 @@ class HomePage {
     cy.visit(url);
   }
 
-  clicarBotaoAceitarCookies(){
-    cy.wait(2000);
-    cy.get(homeElements.botaoAceitarCookies()).should('exist').click();
-    cy.wait(2000);
-  }
-
-  ignorarBotaoAceitarCookiesNaoEncontrado(){
-    cy.get(homeElements.botaoAceitarCookies()).should('not.exist');
-  }
-
-  clicarLinkPortalNegociosCorretor(){
-    cy.get(homeElements.linkPortalNegociosCorretor()).first().click({ force: true });
-  }
-
-  verificarTituloPortalNegociosCorretor(){
-    cy.get(homeElements.tituloPortalNegociosCorretor()).should('exist');
-  }
-
   realizarPesquisa(pesquisa){
-    cy.get(homeElements.botaoBuscar()).click();
     cy.get(homeElements.campoDeBusca()).type(pesquisa);
-    cy.get(homeElements.botaoLupa()).click();
+    cy.get(homeElements.campoDeBusca()).type('{enter}');
+    //cy.get(homeElements.botaoLupa()).click();
   }
 
-  exibirResultadoBusca(){
-    cy.get(homeElements.classeResultadosEncontrados()).should('exist');
+  exibirResultadoBusca(resultado){
+    cy.wait(2000);
+    cy.contains(homeElements.resultadosEncontrados(resultado)).should('exist');
   }
 
-  clicarlinkContratacaoOnline(){
-    cy.get(homeElements.linkContratacaoOnline()).first().click();
+  clicarImagemSpeakers(){
+    cy.get(homeElements.imagemSpeakers()).click();
+  }
+
+  clicarBotaoByNow(){
+    cy.get(homeElements.botaoByNow()).click();
   }
   
+  clicarBotaoAddToCart(){
+    cy.get(homeElements.botaoAddToCart()).click();
+  }
+
+  clicarBotaoCarrinho(){
+    cy.get(homeElements.botaoCarrinho()).click();
+    cy.wait(6000);
+  }
+
+  exibirProduto(produto){
+    cy.contains(homeElements.produtosEncontrados(produto)).should('exist');
+  }
+
+  clicarBotaoCheckOut(){
+    cy.get(homeElements.botaoCheckOut()).click();
+  }
+
 }
 
 export default HomePage;

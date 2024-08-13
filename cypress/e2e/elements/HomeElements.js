@@ -1,36 +1,41 @@
 class HomeElements {
-    
-    botaoAceitarCookies = () => {
-        return '#adopt-accept-all-button'
-    };
-    
-    linkPortalNegociosCorretor = () => {
-        return 'a[href="https://wwwn.bradescoseguros.com.br/pnegocios2/wps/portal/portaldenegociosnovo"]';
-    };
 
-    tituloPortalNegociosCorretor = () => {
-        return 'h2[class="titulo-portal"]';
-    };
-
-    botaoBuscar = () => {
-        return '#btn_search';
+    botaoLupa = () => {
+        return '#menuSearch';
     };
 
     campoDeBusca = () => {
-        return '[placeholder="Digite aqui..."]';
+        return '[name="mobile_search"]';
     };
 
-    botaoLupa = () => {
-        return 'i[class="icon-nav-busca icon"]';
+    resultadosEncontrados = (resultado) => {
+        return resultado;
     };
 
-    classeResultadosEncontrados = () => {
-        return 'big[class="resultados-encontrados"]';
+    imagemSpeakers = () => {
+        return '#speakersImg';
     };
 
-    linkContratacaoOnline = () => {
-        return 'a[title="Contratação online"]'
-    }
+    botaoByNow = () => {
+        return 'button[name="buy_now"]';
+    };
+
+    botaoAddToCart = () => {
+        return 'button[name="save_to_cart"]';
+    };
+
+    botaoCarrinho = () => {
+        return '#shoppingCartLink';
+    };
+
+    produtosEncontrados = (produto) => {
+        return produto;
+    };
+
+    botaoCheckOut = () => {
+        return '#checkOutButton';
+    };
+
 }
 
 export default HomeElements;

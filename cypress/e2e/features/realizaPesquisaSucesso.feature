@@ -1,11 +1,20 @@
 @test @sucesso
-Feature: Sucesso - Pesquisa
+Feature: Sucesso - Busca de produto
 
-  Scenario Outline: Realizar Pesquisa
-    Given que acesso o site da Bradesco Seguros
+  Scenario Outline: Realizar Pesquisa - Produto encontrado
+    Given que acesso o site da Advantageonlineshopping
     When pesquiso <pesquisa> na opcao de pesquisa
-    Then os resultados da pesquisa sao exibidos
+    Then os resultados <resultado> da pesquisa sao exibidos
 
     Examples:
-      | pesquisa |
-      | sinistro |
+      | pesquisa | resultado            |
+      | hp pro   | HP Pro Tablet 608 G1 |
+
+  Scenario Outline: Realizar Pesquisa - Produto NAO encontrado
+    Given que acesso o site da Advantageonlineshopping
+    When pesquiso <pesquisa> na opcao de pesquisa
+    Then os resultados <resultado> da pesquisa sao exibidos
+
+    Examples:
+      | pesquisa | resultado               |
+      | iphone   | No results for "iphone" |

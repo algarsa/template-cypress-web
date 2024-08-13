@@ -26,9 +26,3 @@ Cypress.on("uncaught:exception", (err, runnable) => {
     // failing the test
     return false;
 });
-
-Cypress.Screenshot.defaults({
-    // screenshotOnRunFailure:false,
-    capture: "viewport",
-    overwrite: true,
-});
